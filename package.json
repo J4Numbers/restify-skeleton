@@ -12,7 +12,7 @@
     "template",
     "API"
   ],
-  "author": "Matthew D. Ball <matthew.ball@engineering.digital.dwp.gov.uk>",
+  "author": "Jayne E. Doe <j4numbers@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@m4numbers/eslint-base-config": "^1.1.6",
