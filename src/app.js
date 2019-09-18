@@ -1,3 +1,4 @@
+const fs = require('fs');
 const uuid = require('uuid/v4');
 const restify = require('restify');
 
@@ -7,13 +8,24 @@ const onEventHandlers = require('./lib/middleware/on_handlers');
 const preRequestHandlers = require('./lib/middleware/pre_handlers');
 
 
-const load = async (props) => {
+const load = async (props, formatters = {}) => {
   const log = loggerEngine.bunyanLogger();
+  let http2Config;
+  if (props.app.http2.enabled) {
+    log.info('HTTP/2 configuration accepted...');
+    http2Config = {
+      key:  fs.readFileSync(props.app.http2.key),
+      cert: fs.readFileSync(props.app.http2.cert),
+    };
+  }
+
   const server = restify.createServer({
     name:                props.app.name,
     url:                 props.app.hostname,
     ignoreTrailingSlash: true,
     log,
+    formatters,
+    http2:               http2Config,
   });
 
   server.pre(restify.plugins.pre.dedupeSlashes());
