@@ -9,7 +9,7 @@ const preRequestHandlers = require('./lib/middleware/pre_handlers');
 
 
 const load = async (props, formatters = {}) => {
-  const log = loggerEngine.bunyanLogger();
+  const log = loggerEngine.bunyanLogger(props);
   let http2Config;
   if (props.app.http2.enabled) {
     log.info('HTTP/2 configuration accepted...');
