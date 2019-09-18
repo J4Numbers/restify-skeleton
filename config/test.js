@@ -5,7 +5,7 @@ module.exports = {
       key:     '/path/to/key/file',
       cert:    '/path/to/cert/file',
     },
-    name:     'address-lookup-mock',
+    name:     'restify-skeleton',
     hostname: 'localhost',
     port:     '8080',
   },
