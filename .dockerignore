@@ -1,0 +1,8 @@
+.idea/
+node_modules/*
+config/local*
+public/
+
+Dockerfile
+build-docker.sh
+docker-compose.yml

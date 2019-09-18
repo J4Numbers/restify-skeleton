@@ -16,12 +16,20 @@
   "license": "MIT",
   "devDependencies": {
     "@j4numbers/eslint-base-config": "^1.1.6",
-    "eslint": "^6.4.0"
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.4.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "sinon": "^7.4.2",
+    "sinon-chai": "^3.3.0"
   },
   "dependencies": {
     "bunyan": "^1.8.12",
     "config": "^3.2.2",
     "restify": "^8.4.0",
+    "restify-errors": "^8.0.1",
     "uuid": "^3.3.3"
   }
 }
