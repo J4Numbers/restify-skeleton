@@ -1,3 +1,1 @@
-module.exports = (server) => {
-  return server;
-};
+module.exports = (server) => server;

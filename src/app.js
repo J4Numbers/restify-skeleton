@@ -8,7 +8,7 @@ const onEventHandlers = require('./lib/middleware/on_handlers');
 const preRequestHandlers = require('./lib/middleware/pre_handlers');
 
 
-const load = async (props, formatters = {}) => {
+const load = async (props, routeHandler = (routeServer) => routeServer, formatters = {}) => {
   const log = loggerEngine.bunyanLogger(props);
   let http2Config;
   if (props.app.http2.enabled) {
@@ -44,6 +44,7 @@ const load = async (props, formatters = {}) => {
 
   onEventHandlers(server);
   routingEngine(server);
+  routeHandler(server);
 
   return server;
 };
