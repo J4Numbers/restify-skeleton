@@ -4,8 +4,11 @@
   "description": "A project to grant a skeletal Retify template to any other project - acting as a bootstrapper",
   "main": "src/app.js",
   "scripts": {
+    "quality:eslint": "eslint .",
+    "quality:eslint:fix": "eslint . --fix",
     "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:mocha",
+    "test:mocha": "NODE_ENV=test nyc --all mocha"
   },
   "keywords": [
     "restify",
@@ -20,6 +23,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-http": "^4.3.0",
     "eslint": "^6.4.0",
+    "eslint-plugin-mocha": "^6.1.1",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "sinon": "^7.4.2",
