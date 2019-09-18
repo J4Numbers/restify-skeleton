@@ -1,16 +1,15 @@
 const bunyan = require('bunyan');
-const config = require('config');
 
 let logger;
 
-const createLogger = () => bunyan.createLogger({
-  name: config.get('app.name'),
-  level: config.get('logger.level'),
+const createLogger = (props) => bunyan.createLogger({
+  name:  props.app.name,
+  level: props.logger.level,
 });
 
-module.exports = () => {
+module.exports = (props) => {
   if (logger === undefined) {
-    logger = createLogger();
+    logger = createLogger(props);
   }
   return logger;
 };
