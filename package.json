@@ -1,7 +1,7 @@
 {
   "name": "restify-skeleton",
   "version": "1.0.0",
-  "description": "A project which reflects the Address Lookup spec API file with none of the backed data",
+  "description": "A project to grant a skeletal Retify template to any other project - acting as a bootstrapper",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -15,13 +15,13 @@
   "author": "Jayne E. Doe <j4numbers@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@m4numbers/eslint-base-config": "^1.1.6",
-    "eslint": "^6.0.1"
+    "@j4numbers/eslint-base-config": "^1.1.6",
+    "eslint": "^6.4.0"
   },
   "dependencies": {
     "bunyan": "^1.8.12",
-    "config": "^3.2.0",
-    "restify": "^8.3.3",
-    "uuid": "^3.3.2"
+    "config": "^3.2.2",
+    "restify": "^8.4.0",
+    "uuid": "^3.3.3"
   }
 }
